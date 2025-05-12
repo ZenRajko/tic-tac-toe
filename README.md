@@ -1,24 +1,16 @@
-# TIC TAC TOE
+# TIC-TAC-TOE
 
-*A single game project to practice React development and GitHub processes.*
+*A classic game of man vs machine*
 
-# Goals
+## Overview
 
-* Built in React
-* Deployed to GitHub Page
-* Interactive within GitHub Page
-* Single-player, with app as opposition
+A simple, single-player game built with React and Typescript, and using a few CSS tricks and animations to create some classy visuals.
 
-# Steps
+[Bring it!](https://zenrajko.github.io/tic-tac-toe/)
 
-1. Create repository :white_check_mark:
-2. Create basic functional React app :white_check_mark:
-3. Deploy to GitHub page and confirm animation :white_check_mark:
-4. Implement tic tac toe board
-5. Display X on user's click
-6. Display O in response to user
-7. Detect win
-8. Improve visuals with CSS/animation
-9. Explore extensions, e.g. like particles in Angular
+## Screenshots
 
-[View demo here](https://zenrajko.github.io/tic-tac-toe/)
+<p>
+  <img src="https://github.com/user-attachments/assets/706a46d9-dacb-4ef2-948a-d90ff0627ef5" width="200" />&nbsp;&nbsp;
+  <img src="https://github.com/user-attachments/assets/18bb2c96-e6da-46d2-8270-5406c2be0fb2" width="200" />
+</p>
