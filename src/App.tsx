@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faRotate, faSkullCrossbones, faTrophy, faMeh } from "@fortawesome/free-solid-svg-icons";
 
 type BoardType = (string | null)[];
 
@@ -28,10 +31,10 @@ const getComputerMove = (board: BoardType): number | null => {
 const App: React.FC = () => {
   const [board, setBoard] = useState<BoardType>(initialBoard);
   const [isUserTurn, setIsUserTurn] = useState<boolean>(true);
-  const winner = checkWinner(board);
+  const outcome = checkWinner(board);
 
   const handleClick = (index: number) => {
-    if (!board[index] && !winner && isUserTurn) {
+    if (!board[index] && !outcome && isUserTurn) {
       const newBoard = [...board];
       newBoard[index] = "X";
       setBoard(newBoard);
@@ -50,16 +53,49 @@ const App: React.FC = () => {
     }
   };
 
+  const getOutcome = () => {
+    if (outcome === "X") {
+      return "Victory is Yours!\nWill you accept another challenge?";
+    } else if (outcome === "O") {
+      return "Failure is simply a lesson.\nWill you continue your education?";
+    } else if (outcome === "Draw") {
+      return "A stalemate.\nWill you attempt to do better?";
+    }
+    return null;
+  };
+
   return (
     <div className="game">
       <div className="title">Tic-Tac-Toe</div>
+      <div className="subtitle">A classic game of man vs machine</div>
       <div className="board">
         {board.map((cell, index) => (
-          <button key={index} className={`${cell == "X" ? "cell-x" : (cell == "O" ? "cell-o" : "cell")}`} onClick={() => handleClick(index)}>
+          <button key={index} onClick={() => handleClick(index)}
+            className={`${cell === "X" ? "cell-x" : (cell === "O" ? "cell-o" : "cell")}`}>
           </button>
         ))}
       </div>
-      {winner && <h2>{winner === "Draw" ? "It's a draw!" : `Winner: ${winner}`}</h2>}
+      <div className="buttons">
+        <button title="Restart" onClick={() => {
+          setBoard(initialBoard);
+          setIsUserTurn(true);
+        }}><FontAwesomeIcon icon={faRotate} /></button>
+        <button title="Visit GitHub Page" onClick={() => {
+          window.open("https://github.com/ZenRajko/tic-tac-toe", "_blank");
+        }
+        }><FontAwesomeIcon icon={faGithub} /></button>
+      </div>
+      {outcome && <div className="backdrop"></div>}
+      {outcome && <div className="outcome">
+        {outcome === "X" && <FontAwesomeIcon icon={faTrophy} className="outcome-icon" />}
+        {outcome === "O" && <FontAwesomeIcon icon={faSkullCrossbones} className="outcome-icon" />}
+        {outcome === "Draw" && <FontAwesomeIcon icon={faMeh} className="outcome-icon" />}
+        {getOutcome()}
+      <button title="Restart" onClick={() => {
+          setBoard(initialBoard);
+          setIsUserTurn(true);
+        }}>Of course! I'm no quitter.</button>
+      </div>}
     </div>
   );
 };
