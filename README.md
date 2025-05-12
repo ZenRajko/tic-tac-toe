@@ -7,8 +7,7 @@
 * Built in React
 * Deployed to GitHub Page
 * Interactive within GitHub Page
-* Single-player
-* 
+* Single-player, with app as opposition
 
 # Steps
 
