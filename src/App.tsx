@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faRotate, faSkullCrossbones, faTrophy, faMeh } from "@fortawesome/free-solid-svg-icons";
+import { faRotate, faInfoCircle, faSkullCrossbones, faTrophy, faMeh } from "@fortawesome/free-solid-svg-icons";
 
 type BoardType = (string | null)[];
 
@@ -31,6 +31,7 @@ const getComputerMove = (board: BoardType): number | null => {
 const App: React.FC = () => {
   const [board, setBoard] = useState<BoardType>(initialBoard);
   const [isUserTurn, setIsUserTurn] = useState<boolean>(true);
+  const [isAbout, setAbout] = useState<boolean>(true);
   const outcome = checkWinner(board);
 
   const handleClick = (index: number) => {
@@ -84,8 +85,12 @@ const App: React.FC = () => {
           window.open("https://github.com/ZenRajko/tic-tac-toe", "_blank");
         }
         }><FontAwesomeIcon icon={faGithub} /></button>
+        <button title="About This App" onClick={() => {
+          setAbout(true);
+        }
+        }><FontAwesomeIcon icon={faInfoCircle} /></button>
       </div>
-      {outcome && <div className="backdrop"></div>}
+      {(outcome || isAbout) && <div className="backdrop"></div>}
       {outcome && <div className="outcome">
         {outcome === "X" && <FontAwesomeIcon icon={faTrophy} className="outcome-icon" />}
         {outcome === "O" && <FontAwesomeIcon icon={faSkullCrossbones} className="outcome-icon" />}
@@ -95,6 +100,13 @@ const App: React.FC = () => {
           setBoard(initialBoard);
           setIsUserTurn(true);
         }}>Of course! I'm no quitter.</button>
+      </div>}
+      {isAbout && <div className="about">
+        {isAbout && <FontAwesomeIcon icon={faInfoCircle} className="about-icon" />}
+        {"A Game By ZenRajko\n12 May 2025\nThanks for playing!"}
+      <button title="Close" onClick={() => {
+        setAbout(false);
+        }}>Return to battle!</button>
       </div>}
     </div>
   );

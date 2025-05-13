@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 95vh;
 }
 
 .board {
@@ -87,10 +87,10 @@ body {
 }
 
 .buttons {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
-.buttons button, .outcome button {
+.buttons button, .outcome button, .about button {
   border: solid 3px #FFFFFF44;
   border-radius: 5px;
   background-color: transparent;
@@ -100,11 +100,15 @@ body {
   margin: 0 10px 0 10px;
 }
 
+.buttons button {
+  width: 35px;
+}
+
 .buttons button:hover, .outcome button:hover {
   background-color: #FFFFFF22;
 }
 
-.outcome button {
+.outcome button, .about button {
   border: solid 3px #FFFFFF66;
   color: #FFFFFF66;
   margin-top: 15px;
@@ -148,7 +152,7 @@ body {
   animation: fadeIn 1s ease-in-out forwards;
 }
 
-.outcome {
+.outcome, .about {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -174,7 +178,13 @@ body {
   animation: fadeIn 1s ease-in-out forwards;
 }
 
-.outcome-icon {
+.about {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.outcome-icon, .about-icon {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
