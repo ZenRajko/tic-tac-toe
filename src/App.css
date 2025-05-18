@@ -14,13 +14,13 @@ body {
   margin-bottom: 15px;
 }
 
-.subtitle {
+.subtitle, .opponents p {
   text-align: center;
   font-size: 1.0rem;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   color: #FFFFFFAA;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .game {
@@ -87,10 +87,10 @@ body {
 }
 
 .buttons {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-.buttons button, .outcome button, .about button {
+button {
   border: solid 3px #FFFFFF44;
   border-radius: 5px;
   background-color: transparent;
@@ -104,11 +104,16 @@ body {
   width: 35px;
 }
 
-.buttons button:hover, .outcome button:hover {
+button:hover {
   background-color: #FFFFFF22;
 }
 
-.outcome button, .about button {
+button.cell, button.cell-x, button.cell-o {
+  margin: 0;
+  padding: 0;
+}
+
+.outcome button, .about button, .opponents button {
   border: solid 3px #FFFFFF66;
   color: #FFFFFF66;
   margin-top: 15px;
@@ -187,4 +192,22 @@ body {
 .outcome-icon, .about-icon {
   font-size: 2.5rem;
   margin-bottom: 10px;
+}
+
+.opponents p {
+  margin: 20px 0 15px 0;
+}
+
+.opponents button {
+  font-size: 0.91rem;
+  font-weight: normal;
+  margin: 0 5px 0 5px;
+}
+
+.current-opponent {
+  background-color: #FFFFFF22;
+}
+
+.current-opponent:hover {
+  background-color: #FFFFFF44;
 }
