@@ -2,11 +2,15 @@
 
 A simple, single-player game built with React and Typescript, and using a few CSS tricks and animations to create some classy visuals.
 
-[Bring it!](https://zenrajko.github.io/tic-tac-toe/)
+:zap: Now with a choice of two opponent types! The easy Random Clicker, and the more challenging Astute Antagonist.
+
+<a href='https://zenrajko.github.io/tic-tac-toe/' target="_blank">Bring it!</a>
 <br><br>
 >NOTE: This app features animations when the tiles appear and when the game ends. If you're not seeing any animations, ensure animations are enabled in the Accessibility settings of your computer/phone.
 <br>
 <p>
-  <img src="https://github.com/user-attachments/assets/706a46d9-dacb-4ef2-948a-d90ff0627ef5" width="200" />&nbsp;&nbsp;
-  <img src="https://github.com/user-attachments/assets/18bb2c96-e6da-46d2-8270-5406c2be0fb2" width="200" />
+  <a href='https://zenrajko.github.io/tic-tac-toe/' target="_blank"><img src="https://github.com/user-attachments/assets/0901949a-52d7-4ac3-8223-98465d2d51be" width="200" /></a>
+  &nbsp;&nbsp;
+  <a href='https://zenrajko.github.io/tic-tac-toe/' target="_blank"><img src="https://github.com/user-attachments/assets/e4d21bb2-ea64-4e03-a02f-2638d692d671" width="200" /></a>
 </p>
+
