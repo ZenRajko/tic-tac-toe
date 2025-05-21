@@ -28,3 +28,7 @@ AI-assisted development is definitely helpful, and with a small project like thi
 But at some point in the development process, I found it easier to visualise and write the code myself rather than explain what I wanted to the AI, and more satisfying.
 I think this is probably a result of decades of practice at writing code, and the pleasure that came from it. 
 Which suggests AI-assisted development will be more attractive to beginners or those entering the industry, and certainly lowers the bar for entry which is good overall.
+
+### Terms & Conditions
+
+This app is provided as-is. Use at own risk. Free to use as you want, although some credit would be nice.
