@@ -137,7 +137,7 @@ const App: React.FC = () => {
         <button title="Restart" onClick={() => restartGame(opponentType)}>
           <FontAwesomeIcon icon={faRotate} /></button>
         <button title="Visit GitHub Page" onClick={() => {
-          window.open("https://github.com/ZenRajko/tic-tac-toe", "_blank");
+          window.open("https://github.com/Zenrajko/tic-tac-toe", "_blank");
         }
         }><FontAwesomeIcon icon={faGithub} /></button>
         <button title="About This App" onClick={() => {
@@ -155,7 +155,7 @@ const App: React.FC = () => {
       </div>}
       {isAbout && <div className="about">
         {isAbout && <FontAwesomeIcon icon={faInfoCircle} className="about-icon" />}
-        {"A Game By D.Rajkowski\n12 May 2025\nThanks for playing!"}
+        {"A Game By Zenrajko\n12 May 2025\nThanks for playing!"}
       <button title="Close" onClick={() => {
         setAbout(false);
         }}>Return to battle!</button>
